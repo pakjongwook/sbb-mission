@@ -24,9 +24,14 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
+    // 프로그램을 수정하고 변경된 사항을 확인할 수 있도록 하는 개발 도구
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // H2 데이터베이스
+    runtimeOnly 'com.h2database:h2'
+    // H2 JPA 이용할 수 있는 개발 도구
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 }
 
 tasks.named('bootBuildImage') {
